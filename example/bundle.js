@@ -21834,8 +21834,6 @@
 	            for (var i = 0; i < activeLinks.length; i++) {
 	                activeLinks[i].className = activeLinks[i].className + (activeLinks[i].className.length > 0 ? ' ' : '') + ('' + this.props.activeClass);
 	            }
-
-	            this._resetScroll();
 	        }
 	    }, {
 	        key: '_removeActiveClass',
@@ -21990,6 +21988,7 @@
 	            }, false);
 
 	            touchsurface.addEventListener('touchmove', function (e) {
+	                console.log('BALLS');
 	                e.preventDefault(); // prevent scrolling when inside DIV
 	            }, false);
 

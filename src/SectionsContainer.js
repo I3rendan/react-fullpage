@@ -90,8 +90,6 @@ export default class SectionsContainer extends React.Component {
         for (let i = 0; i < activeLinks.length; i++) {
             activeLinks[i].className = activeLinks[i].className + (activeLinks[i].className.length > 0 ? ' ' : '') + `${this.props.activeClass}`;
         }
-
-        this._resetScroll();
     }
 
     _removeActiveClass() {
@@ -225,6 +223,7 @@ export default class SectionsContainer extends React.Component {
     }, false)
   
     touchsurface.addEventListener('touchmove', function(e){
+        console.log('BALLS');
         e.preventDefault() // prevent scrolling when inside DIV
     }, false)
   
