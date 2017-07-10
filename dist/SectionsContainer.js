@@ -184,7 +184,7 @@ var SectionsContainer = function (_React$Component) {
             this.prevScrollDelta = this.currScrollDelta;
             this.currScrollDelta = Math.abs(event.wheelDelta);
 
-            if (Math.abs(this.currScrollDelta - this.prevScrollDelta) > 85) {
+            if (Math.abs(this.currScrollDelta - this.prevScrollDelta) > 100) {
                 this.state.scrollingStarted = false;
                 this._clearResetScrollTimer();
             }
@@ -349,7 +349,7 @@ var SectionsContainer = function (_React$Component) {
                 _this4.setState({
                     scrollingStarted: false
                 });
-            }, this.props.delay + 850);
+            }, this.props.delay + 500);
         }
     }, {
         key: '_clearResetScrollTimer',
