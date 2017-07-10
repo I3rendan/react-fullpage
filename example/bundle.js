@@ -22068,7 +22068,7 @@
 	                _this4.setState({
 	                    scrollingStarted: false
 	                });
-	            }, this.props.delay + 500);
+	            }, this.props.delay + 666);
 	        }
 	    }, {
 	        key: '_clearResetScrollTimer',
