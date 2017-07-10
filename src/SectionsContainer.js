@@ -138,16 +138,13 @@ export default class SectionsContainer extends React.Component {
 
     _handleMouseWheel(event) {
         
-        console.log('Wheel!');
+        console.log('Wheel! ' + event.wheelDelta);
 
         const e = window.event || event; // old IE support
         const delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
         const activeSection = this.state.activeSection - delta;
 
         if (this.state.scrollingStarted || activeSection < 0 || this._childrenLength === activeSection) {
-            
-            console.log('FALSE Wheel!');
-
             return false;
         }
 

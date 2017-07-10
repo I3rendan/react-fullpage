@@ -175,16 +175,13 @@ var SectionsContainer = function (_React$Component) {
         key: '_handleMouseWheel',
         value: function _handleMouseWheel(event) {
 
-            console.log('Wheel!');
+            console.log('Wheel! ' + event.wheelDelta);
 
             var e = window.event || event; // old IE support
             var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
             var activeSection = this.state.activeSection - delta;
 
             if (this.state.scrollingStarted || activeSection < 0 || this._childrenLength === activeSection) {
-
-                console.log('FALSE Wheel!');
-
                 return false;
             }
 
