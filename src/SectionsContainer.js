@@ -153,7 +153,7 @@ export default class SectionsContainer extends React.Component {
             this.prevScrollDelta / this.currScrollDelta < 0.125 || 
             this.currScrollDelta - this.prevScrollDelta > 75){
             
-            console.log('----- #####  $$$$$   SCROLL   $$$$$  ##### -----');
+            console.log('----- #####  $$$$$  SCROLL  $$$$$  ##### -----');
 
             this.state.scrollingStarted = false;
             this._clearResetScrollTimer();
