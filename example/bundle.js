@@ -21820,8 +21820,8 @@
 	    }, {
 	        key: '_addCSS3Scroll',
 	        value: function _addCSS3Scroll() {
-	            //this._addOverflowToBody();
-	            //this._addMouseWheelEventHandlers();
+	            this._addOverflowToBody();
+	            this._addMouseWheelEventHandlers();
 	        }
 	    }, {
 	        key: '_addActiveClass',
@@ -21962,13 +21962,13 @@
 	                dist,
 	                distX,
 	                distY,
-	                threshold = 50,
+	                threshold = 5,
 
 	            //required min distance traveled to be considered swipe
-	            restraint = 100,
+	            restraint = 10,
 
 	            // maximum distance allowed at the same time in perpendicular direction
-	            allowedTime = 1000,
+	            allowedTime = 100,
 
 	            // maximum time allowed to travel that distance
 	            elapsedTime,
