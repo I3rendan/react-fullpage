@@ -13,6 +13,9 @@ export default class SectionsContainer extends React.Component {
             windowHeight: 0
         };
 
+        const prevScrollDelta = 0;
+        const currScrollDelta = 0;
+
         this._handleMouseWheel = this._handleMouseWheel.bind(this);
         this._handleAnchor = this._handleAnchor.bind(this);
         this._handleResize = this._handleResize.bind(this);
@@ -137,12 +140,17 @@ export default class SectionsContainer extends React.Component {
     }
 
     _handleMouseWheel(event) {
-        
-        console.log('Wheel! ' + event.wheelDelta + ' -- ' + event.detail);
-
         const e = window.event || event; // old IE support
         const delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
         const activeSection = this.state.activeSection - delta;
+
+        this.prevScrollDelta = this.currScrollDelta;
+        this.currScrollDelta = Math.abs(event.wheelDelta);
+
+        if (this.currScrollDelta / this.prevScrollDelta < 0.5 || this.currScrollDelta - this.prevScrollDelta > 100){
+            this.state.scrollingStarted = false;
+            this._clearResetScrollTimer();
+        }
 
         if (this.state.scrollingStarted || activeSection < 0 || this._childrenLength === activeSection) {
             return false;

@@ -21749,6 +21749,9 @@
 	            windowHeight: 0
 	        };
 
+	        var prevScrollDelta = 0;
+	        var currScrollDelta = 0;
+
 	        _this._handleMouseWheel = _this._handleMouseWheel.bind(_this);
 	        _this._handleAnchor = _this._handleAnchor.bind(_this);
 	        _this._handleResize = _this._handleResize.bind(_this);
@@ -21890,12 +21893,17 @@
 	    }, {
 	        key: '_handleMouseWheel',
 	        value: function _handleMouseWheel(event) {
-
-	            console.log('Wheel! ' + event.wheelDelta + ' -- ' + event.detail);
-
 	            var e = window.event || event; // old IE support
 	            var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
 	            var activeSection = this.state.activeSection - delta;
+
+	            this.prevScrollDelta = this.currScrollDelta;
+	            this.currScrollDelta = Math.abs(event.wheelDelta);
+
+	            if (this.currScrollDelta / this.prevScrollDelta < 0.5 || this.currScrollDelta - this.prevScrollDelta > 100) {
+	                this.state.scrollingStarted = false;
+	                this._clearResetScrollTimer();
+	            }
 
 	            if (this.state.scrollingStarted || activeSection < 0 || this._childrenLength === activeSection) {
 	                return false;
