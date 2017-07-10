@@ -22034,10 +22034,6 @@
 	            if (!this.props.anchors.length || hash) {
 	                window.location.hash = '#' + hash;
 	            }
-
-	            this.setState({
-	                scrollingStarted: true
-	            });
 	        }
 	    }, {
 	        key: '_handleScrollCallback',
@@ -22061,7 +22057,7 @@
 	                _this4.setState({
 	                    scrollingStarted: false
 	                });
-	            }, this.props.delay + 300);
+	            }, this.props.delay + 1000);
 	        }
 	    }, {
 	        key: '_clearResetScrollTimer',

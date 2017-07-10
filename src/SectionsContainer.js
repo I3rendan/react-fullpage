@@ -265,10 +265,6 @@ export default class SectionsContainer extends React.Component {
         if (!this.props.anchors.length || hash) {
             window.location.hash = '#' + hash;
         }
-
-        this.setState({
-            scrollingStarted: true
-        });
     }
 
     _handleScrollCallback() {
@@ -284,7 +280,7 @@ export default class SectionsContainer extends React.Component {
             this.setState({
                 scrollingStarted: false
             });
-        }, this.props.delay + 300);
+        }, this.props.delay + 1000);
     }
 
     _clearResetScrollTimer() {
