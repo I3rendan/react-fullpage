@@ -137,6 +137,7 @@ export default class SectionsContainer extends React.Component {
     }
 
     _handleMouseWheel(event) {
+        event.preventDefault();
         const e = window.event || event; // old IE support
         const delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
         const activeSection = this.state.activeSection - delta;
@@ -205,9 +206,9 @@ export default class SectionsContainer extends React.Component {
     dist,
     distX,
     distY,
-    threshold = 5, //required min distance traveled to be considered swipe
-    restraint = 10, // maximum distance allowed at the same time in perpendicular direction
-    allowedTime = 100, // maximum time allowed to travel that distance
+    threshold = 50, //required min distance traveled to be considered swipe
+    restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+    allowedTime = 1000, // maximum time allowed to travel that distance
     elapsedTime,
     startTime,
     handleswipe = function(swipedir){console.log(swipedir);}
@@ -303,10 +304,10 @@ export default class SectionsContainer extends React.Component {
                 display: 'block',
                 margin: '10px',
                 borderRadius: '100%',
-                backgroundColor: '#556270',
+                backgroundColor: this.state.activeSection === index ? '#FE5F55' : 'rgba(255,255,255,0.5)',
                 padding: '5px',
                 transition: 'all 0.2s',
-                transform: this.state.activeSection === index ? 'scale(1.3)' : 'none'
+                transform: this.state.activeSection === index ? 'scale(1.5)' : 'none'
             };
 
             return (

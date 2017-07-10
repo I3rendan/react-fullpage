@@ -21890,6 +21890,7 @@
 	    }, {
 	        key: '_handleMouseWheel',
 	        value: function _handleMouseWheel(event) {
+	            event.preventDefault();
 	            var e = window.event || event; // old IE support
 	            var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
 	            var activeSection = this.state.activeSection - delta;
@@ -21962,13 +21963,13 @@
 	                dist,
 	                distX,
 	                distY,
-	                threshold = 5,
+	                threshold = 50,
 
 	            //required min distance traveled to be considered swipe
-	            restraint = 10,
+	            restraint = 100,
 
 	            // maximum distance allowed at the same time in perpendicular direction
-	            allowedTime = 100,
+	            allowedTime = 1000,
 
 	            // maximum time allowed to travel that distance
 	            elapsedTime,
@@ -22084,10 +22085,10 @@
 	                    display: 'block',
 	                    margin: '10px',
 	                    borderRadius: '100%',
-	                    backgroundColor: '#556270',
+	                    backgroundColor: _this5.state.activeSection === index ? '#FE5F55' : 'rgba(255,255,255,0.5)',
 	                    padding: '5px',
 	                    transition: 'all 0.2s',
-	                    transform: _this5.state.activeSection === index ? 'scale(1.3)' : 'none'
+	                    transform: _this5.state.activeSection === index ? 'scale(1.5)' : 'none'
 	                };
 
 	                return React.createElement('a', { href: '#' + link, key: index, className: _this5.props.navigationAnchorClass || 'Navigation-Anchor',
