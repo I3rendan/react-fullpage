@@ -174,9 +174,12 @@ var SectionsContainer = function (_React$Component) {
     }, {
         key: '_handleMouseWheel',
         value: function _handleMouseWheel(event) {
+            console.log('Wheel!');
             var e = window.event || event; // old IE support
             var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
             var activeSection = this.state.activeSection - delta;
+
+            this._clearResetScrollTimer();
 
             if (this.state.scrollingStarted || activeSection < 0 || this._childrenLength === activeSection) {
                 return false;
@@ -338,7 +341,7 @@ var SectionsContainer = function (_React$Component) {
                 _this4.setState({
                     scrollingStarted: false
                 });
-            }, this.props.delay + 750);
+            }, this.props.delay + 850);
         }
     }, {
         key: '_clearResetScrollTimer',
