@@ -137,6 +137,9 @@ export default class SectionsContainer extends React.Component {
     }
 
     _handleMouseWheel(event) {
+        
+        console.log('Wheel!');
+
         const e = window.event || event; // old IE support
         const delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
         const activeSection = this.state.activeSection - delta;
@@ -268,8 +271,13 @@ export default class SectionsContainer extends React.Component {
     }
 
     _handleScrollCallback() {
+
+        console.log('ScrollBack!');
+
         if (this.props.scrollCallback) {
-            this. _clearResetScrollTimer();
+
+            console.log('ScrollBack + 1!');
+            
             setTimeout(() => this.props.scrollCallback(this.state), 0);
         }
     }
