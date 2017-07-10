@@ -90,6 +90,8 @@ export default class SectionsContainer extends React.Component {
         for (let i = 0; i < activeLinks.length; i++) {
             activeLinks[i].className = activeLinks[i].className + (activeLinks[i].className.length > 0 ? ' ' : '') + `${this.props.activeClass}`;
         }
+
+        this._resetScroll();
     }
 
     _removeActiveClass() {
@@ -137,7 +139,6 @@ export default class SectionsContainer extends React.Component {
     }
 
     _handleMouseWheel(event) {
-        event.preventDefault();
         const e = window.event || event; // old IE support
         const delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
         const activeSection = this.state.activeSection - delta;
@@ -304,7 +305,7 @@ export default class SectionsContainer extends React.Component {
                 display: 'block',
                 margin: '10px',
                 borderRadius: '100%',
-                backgroundColor: this.state.activeSection === index ? '#FE5F55' : 'rgba(255,255,255,0.5)',
+                backgroundColor: this.state.activeSection === index ? '#FE5F55' : 'rgba(255,255,255,0.33)',
                 padding: '5px',
                 transition: 'all 0.2s',
                 transform: this.state.activeSection === index ? 'scale(1.5)' : 'none'

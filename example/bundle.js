@@ -21834,6 +21834,8 @@
 	            for (var i = 0; i < activeLinks.length; i++) {
 	                activeLinks[i].className = activeLinks[i].className + (activeLinks[i].className.length > 0 ? ' ' : '') + ('' + this.props.activeClass);
 	            }
+
+	            this._resetScroll();
 	        }
 	    }, {
 	        key: '_removeActiveClass',
@@ -21890,7 +21892,6 @@
 	    }, {
 	        key: '_handleMouseWheel',
 	        value: function _handleMouseWheel(event) {
-	            event.preventDefault();
 	            var e = window.event || event; // old IE support
 	            var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
 	            var activeSection = this.state.activeSection - delta;
@@ -22085,7 +22086,7 @@
 	                    display: 'block',
 	                    margin: '10px',
 	                    borderRadius: '100%',
-	                    backgroundColor: _this5.state.activeSection === index ? '#FE5F55' : 'rgba(255,255,255,0.5)',
+	                    backgroundColor: _this5.state.activeSection === index ? '#FE5F55' : 'rgba(255,255,255,0.33)',
 	                    padding: '5px',
 	                    transition: 'all 0.2s',
 	                    transform: _this5.state.activeSection === index ? 'scale(1.5)' : 'none'
