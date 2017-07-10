@@ -21890,14 +21890,9 @@
 	    }, {
 	        key: '_handleMouseWheel',
 	        value: function _handleMouseWheel(event) {
-
-	            console.log('Wheel!');
-
 	            var e = window.event || event; // old IE support
 	            var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
 	            var activeSection = this.state.activeSection - delta;
-
-	            this._clearResetScrollTimer();
 
 	            if (this.state.scrollingStarted || activeSection < 0 || this._childrenLength === activeSection) {
 	                return false;
@@ -22046,6 +22041,7 @@
 	            var _this3 = this;
 
 	            if (this.props.scrollCallback) {
+	                this._clearResetScrollTimer();
 	                setTimeout(function () {
 	                    return _this3.props.scrollCallback(_this3.state);
 	                }, 0);
