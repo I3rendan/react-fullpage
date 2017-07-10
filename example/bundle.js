@@ -21891,7 +21891,7 @@
 	        key: '_handleMouseWheel',
 	        value: function _handleMouseWheel(event) {
 
-	            console.log('Wheel! ' + event.wheelDelta);
+	            console.log('Wheel! ' + event.wheelDelta + ' -- ' + e.detail);
 
 	            var e = window.event || event; // old IE support
 	            var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
