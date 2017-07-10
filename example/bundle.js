@@ -21902,9 +21902,9 @@
 
 	            console.log('CURR: ' + this.currScrollDelta + ' -- PREV: ' + this.prevScrollDelta);
 
-	            if (this.currScrollDelta / this.prevScrollDelta < 0.5 || this.prevScrollDelta / this.currScrollDelta < 0.25 || this.currScrollDelta - this.prevScrollDelta > 75) {
+	            if (this.currScrollDelta / this.prevScrollDelta < 0.425 || this.prevScrollDelta / this.currScrollDelta < 0.125 || this.currScrollDelta - this.prevScrollDelta > 75) {
 
-	                console.log('----- #####  SCROLL  ##### -----');
+	                console.log('----- #####  $$$$$   SCROLL   $$$$$  ##### -----');
 
 	                this.state.scrollingStarted = false;
 	                this._clearResetScrollTimer();
