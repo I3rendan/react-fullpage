@@ -269,7 +269,6 @@ var SectionsContainer = function (_React$Component) {
             }, false);
 
             touchsurface.addEventListener('touchmove', function (e) {
-                console.log('BALLS');
                 e.preventDefault(); // prevent scrolling when inside DIV
             }, false);
 
@@ -316,6 +315,10 @@ var SectionsContainer = function (_React$Component) {
             if (!this.props.anchors.length || hash) {
                 window.location.hash = '#' + hash;
             }
+
+            this.setState({
+                scrollingStarted: false
+            });
         }
     }, {
         key: '_handleScrollCallback',

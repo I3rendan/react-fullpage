@@ -223,7 +223,6 @@ export default class SectionsContainer extends React.Component {
     }, false)
   
     touchsurface.addEventListener('touchmove', function(e){
-        console.log('BALLS');
         e.preventDefault() // prevent scrolling when inside DIV
     }, false)
   
@@ -266,6 +265,10 @@ export default class SectionsContainer extends React.Component {
         if (!this.props.anchors.length || hash) {
             window.location.hash = '#' + hash;
         }
+
+        this.setState({
+            scrollingStarted: false
+        });
     }
 
     _handleScrollCallback() {
