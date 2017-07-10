@@ -186,7 +186,7 @@ var SectionsContainer = function (_React$Component) {
 
             console.log('CURR: ' + this.currScrollDelta + ' -- PREV: ' + this.prevScrollDelta);
 
-            if (this.currScrollDelta / this.prevScrollDelta < 0.64 || this.currScrollDelta - this.prevScrollDelta > 100) {
+            if (this.currScrollDelta / this.prevScrollDelta < 0.525 || this.currScrollDelta - this.prevScrollDelta > 85) {
 
                 console.log('----- ##### ***** SCROLL ***** ##### -----');
 
