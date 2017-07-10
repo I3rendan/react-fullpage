@@ -280,7 +280,7 @@ export default class SectionsContainer extends React.Component {
             this.setState({
                 scrollingStarted: false
             });
-        }, this.props.delay + 1000);
+        }, this.props.delay + 500);
     }
 
     _clearResetScrollTimer() {

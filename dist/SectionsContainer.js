@@ -338,7 +338,7 @@ var SectionsContainer = function (_React$Component) {
                 _this4.setState({
                     scrollingStarted: false
                 });
-            }, this.props.delay + 1000);
+            }, this.props.delay + 500);
         }
     }, {
         key: '_clearResetScrollTimer',
