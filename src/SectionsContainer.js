@@ -77,8 +77,8 @@ export default class SectionsContainer extends React.Component {
     }
 
     _addCSS3Scroll() {
-        this._addOverflowToBody();
-        this._addMouseWheelEventHandlers();
+        //this._addOverflowToBody();
+        //this._addMouseWheelEventHandlers();
     }
 
     _addActiveClass() {

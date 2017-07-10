@@ -21820,8 +21820,8 @@
 	    }, {
 	        key: '_addCSS3Scroll',
 	        value: function _addCSS3Scroll() {
-	            this._addOverflowToBody();
-	            this._addMouseWheelEventHandlers();
+	            //this._addOverflowToBody();
+	            //this._addMouseWheelEventHandlers();
 	        }
 	    }, {
 	        key: '_addActiveClass',
