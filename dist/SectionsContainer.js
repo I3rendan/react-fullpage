@@ -174,7 +174,9 @@ var SectionsContainer = function (_React$Component) {
     }, {
         key: '_handleMouseWheel',
         value: function _handleMouseWheel(event) {
+
             console.log('Wheel!');
+
             var e = window.event || event; // old IE support
             var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
             var activeSection = this.state.activeSection - delta;
