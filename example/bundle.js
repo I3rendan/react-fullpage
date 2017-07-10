@@ -21902,7 +21902,7 @@
 
 	            console.log('CURR: ' + this.currScrollDelta + ' -- PREV: ' + this.prevScrollDelta);
 
-	            if (this.currScrollDelta / this.prevScrollDelta < 0.5 || this.currScrollDelta / this.prevScrollDelta > 1.5 || this.currScrollDelta - this.prevScrollDelta > 75) {
+	            if (this.currScrollDelta / this.prevScrollDelta < 0.5 || this.currScrollDelta / this.prevScrollDelta > 5 || this.currScrollDelta - this.prevScrollDelta > 75) {
 
 	                console.log('----- ##### ***** SCROLL ***** ##### -----');
 
