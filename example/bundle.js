@@ -22036,7 +22036,7 @@
 	            }
 
 	            this.setState({
-	                scrollingStarted: false
+	                scrollingStarted: true
 	            });
 	        }
 	    }, {

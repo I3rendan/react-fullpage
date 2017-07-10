@@ -267,7 +267,7 @@ export default class SectionsContainer extends React.Component {
         }
 
         this.setState({
-            scrollingStarted: false
+            scrollingStarted: true
         });
     }
 

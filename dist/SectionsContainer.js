@@ -317,7 +317,7 @@ var SectionsContainer = function (_React$Component) {
             }
 
             this.setState({
-                scrollingStarted: false
+                scrollingStarted: true
             });
         }
     }, {
