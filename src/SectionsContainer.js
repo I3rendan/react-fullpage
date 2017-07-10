@@ -149,8 +149,8 @@ export default class SectionsContainer extends React.Component {
 
         console.log('CURR: ' + this.currScrollDelta + ' -- PREV: ' + this.prevScrollDelta);
 
-        if (this.currScrollDelta / this.prevScrollDelta < 0.425 || 
-            this.currScrollDelta - this.prevScrollDelta > 75){
+        if (this.currScrollDelta / this.prevScrollDelta < 0.5 || 
+            this.currScrollDelta - this.prevScrollDelta > 85){
             
             console.log('----- #####  $$$$  SCROLL  $$$$  ##### -----');
 
