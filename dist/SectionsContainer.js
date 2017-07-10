@@ -182,6 +182,9 @@ var SectionsContainer = function (_React$Component) {
             var activeSection = this.state.activeSection - delta;
 
             if (this.state.scrollingStarted || activeSection < 0 || this._childrenLength === activeSection) {
+
+                console.log('FALSE Wheel!');
+
                 return false;
             }
 
@@ -324,12 +327,7 @@ var SectionsContainer = function (_React$Component) {
         value: function _handleScrollCallback() {
             var _this3 = this;
 
-            console.log('ScrollBack!');
-
             if (this.props.scrollCallback) {
-
-                console.log('ScrollBack + 1!');
-
                 setTimeout(function () {
                     return _this3.props.scrollCallback(_this3.state);
                 }, 0);

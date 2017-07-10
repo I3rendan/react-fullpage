@@ -145,6 +145,9 @@ export default class SectionsContainer extends React.Component {
         const activeSection = this.state.activeSection - delta;
 
         if (this.state.scrollingStarted || activeSection < 0 || this._childrenLength === activeSection) {
+            
+            console.log('FALSE Wheel!');
+
             return false;
         }
 
@@ -271,13 +274,7 @@ export default class SectionsContainer extends React.Component {
     }
 
     _handleScrollCallback() {
-
-        console.log('ScrollBack!');
-
         if (this.props.scrollCallback) {
-
-            console.log('ScrollBack + 1!');
-            
             setTimeout(() => this.props.scrollCallback(this.state), 0);
         }
     }
