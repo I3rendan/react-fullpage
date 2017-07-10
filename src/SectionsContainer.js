@@ -77,8 +77,8 @@ export default class SectionsContainer extends React.Component {
     }
 
     _addCSS3Scroll() {
-        //this._addOverflowToBody();
-        //this._addMouseWheelEventHandlers();
+        this._addOverflowToBody();
+        this._addMouseWheelEventHandlers();
     }
 
     _addActiveClass() {
@@ -205,9 +205,9 @@ export default class SectionsContainer extends React.Component {
     dist,
     distX,
     distY,
-    threshold = 50, //required min distance traveled to be considered swipe
-    restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-    allowedTime = 1000, // maximum time allowed to travel that distance
+    threshold = 5, //required min distance traveled to be considered swipe
+    restraint = 10, // maximum distance allowed at the same time in perpendicular direction
+    allowedTime = 100, // maximum time allowed to travel that distance
     elapsedTime,
     startTime,
     handleswipe = function(swipedir){console.log(swipedir);}
