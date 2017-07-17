@@ -315,9 +315,9 @@ export default class SectionsContainer extends React.Component {
                 margin: '10px',
                 borderRadius: '100%',
                 backgroundColor: this.state.activeSection === index ? '#FE5F55' : 'rgba(255,255,255,0.33)',
-                padding: '3px',
+                padding: '4px',
                 transition: 'all 0.2s',
-                transform: this.state.activeSection === index ? 'scale(2.5)' : 'none'
+                transform: this.state.activeSection === index ? 'scale(2)' : 'none'
             };
 
             return (
