@@ -317,7 +317,7 @@ export default class SectionsContainer extends React.Component {
                 backgroundColor: this.state.activeSection === index ? '#FE5F55' : 'rgba(255,255,255,0.33)',
                 padding: '3px',
                 transition: 'all 0.2s',
-                transform: this.state.activeSection === index ? 'scale(1.5)' : 'none'
+                transform: this.state.activeSection === index ? 'scale(2.5)' : 'none'
             };
 
             return (
