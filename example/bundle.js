@@ -22096,7 +22096,7 @@
 	                    margin: '10px',
 	                    borderRadius: '100%',
 	                    backgroundColor: _this5.state.activeSection === index ? '#FE5F55' : 'rgba(255,255,255,0.33)',
-	                    padding: '5px',
+	                    padding: '3px',
 	                    transition: 'all 0.2s',
 	                    transform: _this5.state.activeSection === index ? 'scale(1.5)' : 'none'
 	                };
