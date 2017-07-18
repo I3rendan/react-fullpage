@@ -21900,7 +21900,7 @@
 	            this.prevScrollDelta = this.currScrollDelta;
 	            this.currScrollDelta = Math.abs(event.wheelDelta);
 
-	            if (Math.abs(this.currScrollDelta - this.prevScrollDelta) > 100) {
+	            if (Math.abs(this.currScrollDelta - this.prevScrollDelta) > 125) {
 	                this.state.scrollingStarted = false;
 	                this._clearResetScrollTimer();
 	            }
@@ -22068,7 +22068,7 @@
 	                _this4.setState({
 	                    scrollingStarted: false
 	                });
-	            }, this.props.delay + 666);
+	            }, this.props.delay + 700);
 	        }
 	    }, {
 	        key: '_clearResetScrollTimer',
