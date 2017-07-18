@@ -21900,7 +21900,7 @@
 	            this.prevScrollDelta = this.currScrollDelta;
 	            this.currScrollDelta = Math.abs(event.wheelDelta);
 
-	            if (Math.abs(this.currScrollDelta - this.prevScrollDelta) > 150) {
+	            if (Math.abs(this.currScrollDelta - this.prevScrollDelta) > 175) {
 	                this.state.scrollingStarted = false;
 	                this._clearResetScrollTimer();
 	            }
