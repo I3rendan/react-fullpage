@@ -147,7 +147,7 @@ export default class SectionsContainer extends React.Component {
         this.prevScrollDelta = this.currScrollDelta;
         this.currScrollDelta = Math.abs(event.wheelDelta);
 
-        if (Math.abs(this.currScrollDelta - this.prevScrollDelta) > 125){
+        if (Math.abs(this.currScrollDelta - this.prevScrollDelta) > 150){
             this.state.scrollingStarted = false;
             this._clearResetScrollTimer();
         }
