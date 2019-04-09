@@ -165,12 +165,14 @@ var SectionsContainer = function (_React$Component) {
     }, {
         key: '_addMouseWheelEventHandlers',
         value: function _addMouseWheelEventHandlers() {
+            window.addEventListener('wheel', this._handleMouseWheel, false);
             window.addEventListener('mousewheel', this._handleMouseWheel, false);
             window.addEventListener('DOMMouseScroll', this._handleMouseWheel, false);
         }
     }, {
         key: '_removeMouseWheelEventHandlers',
         value: function _removeMouseWheelEventHandlers() {
+            window.removeEventListener('wheel', this._handleMouseWheel);
             window.removeEventListener('mousewheel', this._handleMouseWheel);
             window.removeEventListener('DOMMouseScroll', this._handleMouseWheel);
         }

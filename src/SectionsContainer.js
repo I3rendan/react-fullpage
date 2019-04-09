@@ -130,11 +130,13 @@ export default class SectionsContainer extends React.Component {
     }
 
     _addMouseWheelEventHandlers() {
+        window.addEventListener('wheel', this._handleMouseWheel, false);
         window.addEventListener('mousewheel', this._handleMouseWheel, false);
         window.addEventListener('DOMMouseScroll', this._handleMouseWheel, false);
     }
 
     _removeMouseWheelEventHandlers() {
+        window.removeEventListener('wheel', this._handleMouseWheel);
         window.removeEventListener('mousewheel', this._handleMouseWheel);
         window.removeEventListener('DOMMouseScroll', this._handleMouseWheel);
     }
